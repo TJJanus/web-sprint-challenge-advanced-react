@@ -3,7 +3,11 @@ import { useState } from 'react';
 import { useLocalStorage } from "./useLocalStorage";
 
 export const useForm = (key, initialValue) => {
-    const [values, setValues] = useLocalStorage(key, initialValue);
+    const [values, setValues] = useState(key, initialValue);
 
-    return [values, setValues];
+     const handleChanges = (e) => {
+         setValues({ ...values, [e.target.name]: e.target.value });
+       };
+
+    return [values, handleChanges];
 }
