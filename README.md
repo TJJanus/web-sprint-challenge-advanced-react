@@ -30,13 +30,26 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+ A stateful component is dependent on it's state object and can change it's own state. The component re-renders based on changes to it's state, and may pass down properties of it's state to child components as properties on a props object.
+
 2. Describe the different phases of the component lifecycle.
+Mounting: this means rendering elements to the DOM.  
+Updating: A component gets updated everytime the state of the component changes, causing a re-render
+Unmounting: This is when something on the DOM is removed.  
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+
 4. Define stateful logic.
+Stateful logic is any code that usually uses state.  Also known as non-visual behavior.
 
 5. Describe how to test a React component with React Testing Library.
+
+To test a component you have to render the component(kinda like wrapping).  This tests if the component renders and then from there you should be able to test different things such as elements, inputs, buttons, etc. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
